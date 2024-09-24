@@ -1,0 +1,52 @@
+#CIS_Amy_Cardona_lab4.py
+#Module 4 Lab 4
+#Amy Cardona
+#September 4th 2024
+#The company wants a program to modify their bonus portion to include different levels
+# and types and eliminate the day off program
+#program Description as follows:
+#A retail company assigns a $6,000 store bonus if monthly sales are more than $110,000;
+#  else if monthly sales are greater than or equal to $100,000 the store bonus is $5,000,
+#  else if monthly sales are greater than or equal to $90,000 the store bonus is $4,000,
+#  else if monthly sales are greater than or equal to $80,000, the store bonus is $3,000 
+# otherwise a $0 amount or no store bonus is awarded.  They are using a percent of sales 
+# increase to determine if employees get individual bonuses.  If sales increased by an amount 
+# greater than or equal to 5% (0.05) then all employees get $75, else if sales increased by an 
+# amount greater than or equal to 4%, employees get $50, else if sales increased by an amount 
+# greater than or equal to 3% employees get $40 otherwise they get $0. 
+
+#Declare local variables
+#emplyee_bonus
+#store_bonus
+#monthly_sales
+#sales_increase
+
+monthly_sales = float(input('Please Enter the Monthly Sales Amount: '))
+if monthly_sales >= 110000:
+    store_bonus = 6000.0
+elif monthly_sales >= 100000:
+    store_bonus = 5000.0
+elif monthly_sales >= 90000:
+    store_bonus = 4000.0
+elif monthly_sales >= 80000:
+    storebonus = 3000.0
+else:
+    store_bonus = 0.00
+
+sales_increase = float(input('Please Enter the Sales Increase Amount: '))
+sales_increase = sales_increase / 100
+if sales_increase >= 0.05:
+    employee_bonus = 75.00
+elif sales_increase >= 0.04:
+    employee_bonus = 50.00
+elif sales_increase >= 0.03:
+    employee_bonus = 40.00
+else:
+    employee_bonus = 0.00
+
+# This code prints the bonus information
+print("The Store Bonus Amount is $",store_bonus)
+print("The Employee Bonus Amount is $",employee_bonus)
+
+if store_bonus == 6000 and employee_bonus == 75:
+	print('Congrats! You have reached the highest bonus amount possible!')
